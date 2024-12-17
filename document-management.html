@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+      padding: 2rem;
+    }
+
+    /* Header */
+    header {
+      background-color: #004080;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    /* Section Styling */
+    .section {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .section h2 {
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background-color: #e8e8e8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .card:hover {
+      background-color: #d4d4d4;
+      transform: scale(1.05);
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .link-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #004080;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .link-button:hover {
+      background-color: #00264d;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Document Management</h1>
+  </header>
+  <!-- SOP Generation Section -->
+  <section class="section" id="sop-generation">
+    <h2>SOP Generation</h2>
+    <div class="card">
+      <p>Use this tool to create your Statement of Purpose (SOP) for various applications.</p>
+      <a href="https://huggingface.co/spaces/Satyajit45/sop-generator" class="link-button" target="_blank">Generate SOP</a>
+      <button class="link-button" onclick="alert('Feature under development')">Preview SOP</button>
+    </div>
+  </section>
+
+  <!-- Resume Section with AI Tool -->
+  <section class="section" id="resume">
+    <h2>Resume Creation Tool</h2>
+    <div class="card">
+      <p>Create professional resumes with the help of AI technology.</p>
+      <button class="link-button" onclick="alert('Feature under development')">Generate Resume</button>
+    </div>
+  </section>
+
+  <!-- Automated Document Checklist Section -->
+  <section class="section" id="checklist">
+    <h2>Automated Document Checklist</h2>
+    <div class="card">
+      <p>Keep track of required documents with ease and ensure nothing is missed.</p>
+      <button class="link-button" onclick="alert('Feature under development')">Start Checklist</button>
+    </div>
+  </section>
+
+  <!-- Secure Document Vault Section -->
+  <section class="section" id="vault">
+    <h2>Secure Document Vault</h2>
+    <div class="card">
+      <p>Store and access your important documents safely with end-to-end encryption.</p>
+      <button class="link-button" onclick="alert('Feature under development')">Access Vault</button>
+    </div>
+  </section>
+
+  <!-- SOPs Section -->
+  <section class="section" id="sops">
+    <h2>Standard Operating Procedures (SOPs)</h2>
+    <div class="card">
+      <p>Access and create SOPs for your workflow to improve consistency and productivity.</p>
+      <button class="link-button" onclick="alert('Feature under development')">View SOPs</button>
+    </div>
+  </section>
+
+  <!-- AI Review Tool Section -->
+  <section class="section" id="ai-review">
+    <h2>AI Document Review Tool</h2>
+    <div class="card">
+      <p>Use our AI review tool to get feedback and suggestions for your documents.</p>
+      <button class="link-button" onclick="alert('Feature under development')">Review Documents</button>
+    </div>
+  </section>
+
+  <!-- Reference Letters Section -->
+  <section class="section" id="reference-letters">
+    <h2>Reference Letters</h2>
+    <div class="card">
+      <p>Easily create and manage reference letters for job applications or academic purposes.</p>
+      <button class="link-button" onclick="alert('Feature under development')">Create Reference Letter</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Document Management. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Placeholder function for interactivity
+    function alertUnderDevelopment() {
+      alert('Feature under development');
+    }
+  </script>
+</body>
+</html>

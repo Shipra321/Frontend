@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Planning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar Styles */
+    header {
+      background-color: #0066cc;
+      padding: 1rem 2rem;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .dark-mode-toggle {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+      background-color: #005bb5;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      background-color: #ff9900;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .hero button:hover {
+      background-color: #e68a00;
+    }
+
+    /* Card Sections */
+    .card-section {
+      padding: 2rem;
+      text-align: center;
+      background-color: #fff;
+      margin: 1rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background-color: #f1f1f1;
+      padding: 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #e6e6e6;
+      transform: scale(1.05);
+    }
+
+    .card p {
+      font-size: 1rem;
+    }
+
+    .card-content {
+      display: none;
+      margin-top: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input, .form-group select, .form-group button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .form-group button {
+      background-color: #0066cc;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #004d99;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #005bb5;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">FinPlan</div>
+      <ul class="nav-links">
+        <li><a href="#budget">Budget Calculator</a></li>
+        <li><a href="#scholarships">Scholarships</a></li>
+        <li><a href="#loans">Loan Guidance</a></li>
+        <li><a href="#jobs">Part-Time Jobs</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Smart Financial Planning for Your Future</h1>
+    <p>Use our tools and resources to manage your budget, find scholarships, get loan guidance, and explore part-time job opportunities.</p>
+    <button onclick="window.location.href='#budget'">Get Started</button>
+  </section>
+
+  <!-- Budget Calculator -->
+  <section id="budget" class="card-section">
+    <h2>Budget Calculator</h2>
+    <div class="card budget" onclick="toggleContent('budget-content')">
+      <p>Plan and manage your expenses with ease.</p>
+    </div>
+    <div class="card-content" id="budget-content">
+      <p>Enter your income, fixed expenses, and savings goals to get a detailed breakdown and financial plan.</p>
+      <form class="form-group" id="budget-form">
+        <label for="income">Monthly Income ($)</label>
+        <input type="number" id="income" name="income" required>
+
+        <label for="expenses">Fixed Expenses ($)</label>
+        <input type="number" id="expenses" name="expenses" required>
+
+        <label for="savings">Savings Goal ($)</label>
+        <input type="number" id="savings" name="savings" required>
+
+        <button type="button" onclick="calculateBudget()">Calculate</button>
+      </form>
+      <div id="budget-result"></div>
+    </div>
+  </section>
+
+  <!-- Scholarship Finder -->
+  <section id="scholarships" class="card-section">
+    <h2>Scholarship Finder</h2>
+    <div class="card scholarship" onclick="toggleContent('scholarship-content')">
+      <p>Find scholarships that suit your academic profile.</p>
+    </div>
+    <div class="card-content" id="scholarship-content">
+      <p>Explore scholarships based on your academic achievements and personal background. Don't miss the funding opportunities!</p>
+      <form class="form-group" id="scholarship-form">
+        <label for="gpa">GPA</label>
+        <input type="number" step="0.1" id="gpa" name="gpa" required>
+
+        <label for="field">Field of Study</label>
+        <select id="field" name="field">
+          <option value="engineering">Engineering</option>
+          <option value="science">Science</option>
+          <option value="arts">Arts</option>
+          <option value="business">Business</option>
+        </select>
+
+        <button type="button" onclick="findScholarships()">Find Scholarships</button>
+      </form>
+      <div id="scholarship-results"></div>
+    </div>
+  </section>
+
+  <!-- Loan Guidance -->
+  <section id="loans" class="card-section">
+    <h2>Loan Guidance</h2>
+    <div class="card loan" onclick="toggleContent('loan-content')">
+      <p>Get expert advice on loans and repayment plans.</p>
+    </div>
+    <div class="card-content" id="loan-content">
+      <p>Learn about the types of loans available, eligibility criteria, and repayment options that fit your needs.</p>
+      <form class="form-group" id="loan-form">
+        <label for="loan-amount">Loan Amount ($)</label>
+        <input type="number" id="loan-amount" name="loan-amount" required>
+
+        <label for="interest-rate">Interest Rate (%)</label>
+        <input type="number" id="interest-rate" name="interest-rate" step="0.1" required>
+
+        <label for="loan-term">Loan Term (years)</label>
+        <input type="number" id="loan-term" name="loan-term" required>
+
+        <button type="button" onclick="calculateLoan()">Calculate Monthly Payment</button>
+      </form>
+      <div id="loan-payment"></div>
+    </div>
+  </section>
+
+  <!-- Part-Time Job Guide -->
+  <section id="jobs" class="card-section">
+    <h2>Part-Time Job Guide</h2>
+    <div class="card job" onclick="toggleContent('job-content')">
+      <p>Explore part-time jobs near you to support your education.</p>
+    </div>
+    <div class="card-content" id="job-content">
+      <p>Find flexible job opportunities near your campus that fit your schedule. Start earning while you learn!</p>
+      <form class="form-group" id="job-form">
+        <label for="availability">Available Hours/Week</label>
+        <input type="number" id="availability" name="availability" required>
+
+        <label for="preferred-job">Preferred Job Type</label>
+        <select id="preferred-job" name="preferred-job">
+          <option value="tutor">Tutor</option>
+          <option value="barista">Barista</option>
+          <option value="retail">Retail Assistant</option>
+          <option value="admin">Administrative Work</option>
+        </select>
+
+        <button type="button" onclick="findJobs()">Find Jobs</button>
+      </form>
+      <div id="job-results"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 FinPlan. All rights reserved.</p>
+  </footer>
+
+  <script src="financial-planning.js"></script>
+  <script>
+    // Example functions for interaction
+    function toggleContent(contentId) {
+      const content = document.getElementById(contentId);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function calculateBudget() {
+      const income = parseFloat(document.getElementById('income').value);
+      const expenses = parseFloat(document.getElementById('expenses').value);
+      const savings = parseFloat(document.getElementById('savings').value);
+      const result = income - expenses - savings;
+      document.getElementById('budget-result').innerText = `Remaining Budget: $${result.toFixed(2)}`;
+    }
+
+    function findScholarships() {
+      const gpa = parseFloat(document.getElementById('gpa').value);
+      const field = document.getElementById('field').value;
+      // Simulate fetching scholarship results based on input
+      document.getElementById('scholarship-results').innerText = `Scholarships found for ${field} with GPA: ${gpa}`;
+    }
+
+    function calculateLoan() {
+      const amount = parseFloat(document.getElementById('loan-amount').value);
+      const rate = parseFloat(document.getElementById('interest-rate').value) / 100;
+      const term = parseFloat(document.getElementById('loan-term').value) * 12; // Convert years to months
+      const monthlyPayment = (amount * rate / 12) / (1 - Math.pow(1 + rate / 12, -term));
+      document.getElementById('loan-payment').innerText = `Estimated Monthly Payment: $${monthlyPayment.toFixed(2)}`;
+    }
+
+    function findJobs() {
+      const availability = parseFloat(document.getElementById('availability').value);
+      const jobType = document.getElementById('preferred-job').value;
+      // Simulate fetching job results based on input
+      document.getElementById('job-results').innerText = `Part-time jobs available as a ${jobType} for ${availability} hours/week.`;
+    }
+  </script>
+</body>
+</html>

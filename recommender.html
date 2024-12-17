@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">EduVoyage AI</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recommendations">
+            <h2>Your Recommended Universities</h2>
+            <form id="recommender-form" onsubmit="redirectToRecommendations(event)">
+                <label for="country">Preferred Country:</label>
+                <input type="text" id="country" name="country" placeholder="e.g., USA, UK" required>
+
+                <label for="field">Field of Study:</label>
+                <input type="text" id="field" name="field" placeholder="e.g., Computer Science, Business" required>
+
+                <label for="budget">Budget (in USD):</label>
+                <input type="number" id="budget" name="budget" placeholder="e.g., 30000" required>
+
+                <button type="submit">Get Recommendations</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EduVoyage AI. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function redirectToRecommendations(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const country = document.getElementById('country').value;
+            const field = document.getElementById('field').value;
+            const budget = document.getElementById('budget').value;
+
+            // Construct the URL with query parameters
+            const url = `recommendations.html?country=${encodeURIComponent(country)}&field=${encodeURIComponent(field)}&budget=${encodeURIComponent(budget)}`;
+
+            // Redirect to the new page
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

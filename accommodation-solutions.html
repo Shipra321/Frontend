@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accommodation Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="accommodation-solutions.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">AccomSolutions</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#search">Search Housing</a></li>
+        <li><a href="#tips">Settling Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Find Your Perfect Home</h1>
+    <p>Explore safe and affordable housing options and get expert tips for settling into your new place.</p>
+  </section>
+
+  <!-- Property Search Section -->
+  <section id="search" class="search-section">
+    <h2>Search for Housing</h2>
+    <div class="search-container">
+      <input type="text" id="location" placeholder="Enter your desired location" />
+      <input type="number" id="price" placeholder="Max Price ($)" />
+      <button onclick="searchHousing()">Search</button>
+    </div>
+    <div id="results"></div>
+  </section>
+
+  <!-- Tips Section -->
+  <section id="tips" class="tips-section">
+    <h2>Tips for Settling In</h2>
+    <div class="tips-content">
+      <p>Ask questions, connect with neighbors, and organize your space to feel at home.</p>
+      <button onclick="getAIRecommendations()">Get More Tips</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 AccomSolutions. All rights reserved.</p>
+  </footer>
+
+  <script src="accommodation-solutions.js"></script>
+</body>
+</html>

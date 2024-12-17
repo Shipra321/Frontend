@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Centre | EduVoyage AI</title>
+    <link rel="stylesheet" href="community.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">EduVoyage AI</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#community">Community Centre</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="community-intro" id="community">
+            <h1>Welcome to the Community Centre</h1>
+            <p>Engage in discussions, connect with alumni, and chat with peers for academic and personal support.</p>
+        </section>
+
+        <section class="discussion-forums">
+            <h2>Discussion Forums</h2>
+            <div class="forum">
+                <h3>General Academic Discussions</h3>
+                <textarea placeholder="Start a new discussion..." id="new-post"></textarea>
+                <button onclick="postDiscussion()">Post</button>
+            </div>
+            <div class="posts" id="post-list">
+                <!-- User posts will appear here -->
+            </div>
+        </section>
+
+        <section class="alumni-connect">
+            <h2>Alumni Connect</h2>
+            <p>Connect with alumni who have experience studying abroad and gain valuable insights.</p>
+            <button onclick="showAlumniList()">View Alumni List</button>
+            <div id="alumni-list" class="hidden">
+                <ul>
+                    <li>John Doe - University of XYZ</li>
+                    <li>Jane Smith - University of ABC</li>
+                    <!-- More alumni can be added here -->
+                </ul>
+            </div>
+        </section>
+
+        <section class="peer-chat">
+            <h2>Peer Chat</h2>
+            <p>Start a chat with other students to discuss your journey and share experiences.</p>
+            <button onclick="startChat()">Start Chat</button>
+            <div id="chat-window" class="hidden">
+                <div id="chat-messages"></div>
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EduVoyage AI. All Rights Reserved.</p>
+    </footer>
+
+    <script src="community.js"></script>
+</body>
+</html>

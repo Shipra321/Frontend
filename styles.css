@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #253455;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+.hero {
+    text-align: center;
+    padding: 2em;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+}
+
+.features {
+    padding: 1000em;
+    text-align: center;
+    background-color: hsl(176, 23%, 72%);
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card p {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    padding: 1em;
+    border: none;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    background-color: #2575fc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#contact-form button:hover {
+    background-color: #6a11cb;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: white;
+}
+
+.features{
+    background-image: url('https://etias.com/assets/uploads/imagery/blog/study-abroad-safety-guide-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
